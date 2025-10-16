@@ -1,0 +1,11 @@
+.card-project {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-project:hover {
+    transform: translateY(-5px);
+}
+
+#projects h2 {
+    font-weight: 600;
+}
