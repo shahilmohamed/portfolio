@@ -12,6 +12,4 @@ export class SkillsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  skillList = ['Java','Spring Boot','Angular','TypeScript','MySQL','REST API','JWT','Docker'];
-
 }

@@ -1,9 +1,57 @@
-<section id="skills">
+<section id="skills" class="py-5 bg-light" appScrollAnimation animationType="slide">
     <div class="container">
-        <h2>Skills</h2>
-        <div class="row mt-3">
-            <div *ngFor="let s of skillList" class="col-6 col-sm-4 col-md-3 mb-2">
-                <div class="p-2 border rounded">{{s}}</div>
+        <h2 class="text-center mb-4">My Skills</h2>
+
+        <div class="row gy-4">
+            <!-- Backend -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0 rounded-4 backend">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold text-uppercase mb-3">Backend</h5>
+                        <span class="badge bg-success m-1">Java</span>
+                        <span class="badge bg-success m-1">Spring Boot</span>
+                        <span class="badge bg-success m-1">PHP (Learning)</span>
+                        <span class="badge bg-success m-1">Node.js</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Frontend -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0 rounded-4 frontend">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold text-uppercase mb-3">Frontend</h5>
+                        <span class="badge bg-primary m-1">Angular</span>
+                        <span class="badge bg-primary m-1">HTML</span>
+                        <span class="badge bg-primary m-1">CSS</span>
+                        <span class="badge bg-primary m-1">Bootstrap</span>
+                        <span class="badge bg-primary m-1">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0 rounded-4 database">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold text-uppercase mb-3">Database</h5>
+                        <span class="badge bg-warning text-dark m-1">MySQL</span>
+                        <span class="badge bg-warning text-dark m-1">JDBC</span>
+                        <span class="badge bg-warning text-dark m-1">SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0 rounded-4 tools">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold text-uppercase mb-3">Tools</h5>
+                        <span class="badge bg-info text-dark m-1">Git</span>
+                        <span class="badge bg-info text-dark m-1">VS Code</span>
+                        <span class="badge bg-info text-dark m-1">Postman</span>
+                        <span class="badge bg-info text-dark m-1">Tomcat</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

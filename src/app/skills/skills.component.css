@@ -1,1 +1,53 @@
-#skills h2{margin-bottom:12px}
+#skills h2 {
+    margin-bottom: 12px
+}
+
+.frontend {
+    border-top: 5px solid #007bff;
+}
+
+.backend {
+    border-top: 5px solid #28a745;
+}
+
+.database {
+    border-top: 5px solid #ffc107;
+}
+
+.tools {
+    border-top: 5px solid #17a2b8;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    transition: 0.3s;
+}
+
+.badge {
+    opacity: 0;
+    animation: fadeInBadge 0.6s ease forwards;
+}
+
+.badge:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.badge:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.badge:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInBadge {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
