@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-contact',
@@ -14,15 +15,28 @@ export class ContactComponent implements OnInit {
 
   model = { name: '', email: '', message: '' };
   submitted = false;
-
+  successMessage = '';
+  errorMessage = '';
 
   submit() {
     if (this.model.name && this.model.email && this.model.message) {
       this.submitted = true;
-      console.log('Contact form submitted:', this.model);
-      alert('Thank you for reaching out! Your message has been logged in the console.');
-      this.model = { name: '', email: '', message: '' };
+      emailjs
+        .send(
+          'service_h0z7hfk',
+          'template_vq6lxlo',
+          this.model,
+          'Egt9NVVn8wdp9gZlj'
+        )
+        .then(
+          (result: EmailJSResponseStatus) => {
+            this.successMessage = 'Message sent successfully!';
+            this.model = { name: '', email: '', message: '' };
+          },
+          (error) => {
+            this.errorMessage = 'Something went wrong. Please try again.';
+          }
+        );
     }
   }
-
 }
