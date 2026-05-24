@@ -1,19 +1,23 @@
-<section id="projects" class="bg-light py-5" appScrollAnimation animationType="fade">
-    <div class="container">
-        <h2 class="text-center mb-4">Projects</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4" *ngFor="let p of projects">
-                <div class="card h-100 shadow-sm border-0 card-project">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ p.title }}</h5>
-                        <p class="card-text">{{ p.desc }}</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-0">
-                        <a *ngIf="p.repo" [href]="p.repo" class="btn btn-outline-primary btn-sm me-2"
-                            target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="projects" class="projects fade-in">
+  <div class="container">
+    <div class="section-title">
+      <h2>Projects</h2>
+      <p>Selected work and repositories</p>
     </div>
+
+    <div class="projects-grid">
+      <div class="card project-card" *ngFor="let p of projects">
+        <div class="project-placeholder">
+          <span>{{ p.title.charAt(0) }}</span>
+        </div>
+        <div class="project-content">
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.desc }}</p>
+          <div class="project-links" *ngIf="p.repo">
+            <a [href]="p.repo" class="project-link github" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

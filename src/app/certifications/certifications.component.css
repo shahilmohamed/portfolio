@@ -1,0 +1,121 @@
+.certifications-section {
+  padding: var(--section-padding) 0;
+  background-color: var(--background);
+  text-align: center;
+}
+
+.cert-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: left;
+  width: 100%;
+  max-width: 520px;
+}
+
+.cert-card-main {
+  display: flex;
+  align-items: center;
+}
+
+.cert-card--iframe {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-logo--hackerrank {
+  background: #171717;
+  padding: 12px;
+  filter: invert(1);
+}
+
+.cert-iframe-wrap {
+  margin-top: 1.25rem;
+  width: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.cert-iframe-wrap iframe {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  border: none;
+}
+
+.cert-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  margin-right: 1rem;
+  object-fit: contain;
+  background: white;
+  padding: 8px;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.cert-info {
+  flex: 1;
+}
+
+.cert-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.cert-info p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.cert-date {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.cert-date::before {
+  content: '🗓️';
+  margin-right: 0.5rem;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.cert-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}

@@ -1,58 +1,29 @@
-<section id="skills" class="py-5 bg-light" appScrollAnimation animationType="slide">
-    <div class="container">
-        <h2 class="text-center mb-4">My Skills</h2>
-
-        <div class="row gy-4">
-            <!-- Backend -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card shadow border-0 rounded-4 backend">
-                    <div class="card-body text-center">
-                        <h5 class="fw-bold text-uppercase mb-3">Backend</h5>
-                        <span class="badge bg-success m-1">Java</span>
-                        <span class="badge bg-success m-1">Spring Boot</span>
-                        <span class="badge bg-success m-1">PHP (Learning)</span>
-                        <span class="badge bg-success m-1">Node.js</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Frontend -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card shadow border-0 rounded-4 frontend">
-                    <div class="card-body text-center">
-                        <h5 class="fw-bold text-uppercase mb-3">Frontend</h5>
-                        <span class="badge bg-primary m-1">Angular</span>
-                        <span class="badge bg-primary m-1">HTML</span>
-                        <span class="badge bg-primary m-1">CSS</span>
-                        <span class="badge bg-primary m-1">Bootstrap</span>
-                        <span class="badge bg-primary m-1">JavaScript</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Database -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card shadow border-0 rounded-4 database">
-                    <div class="card-body text-center">
-                        <h5 class="fw-bold text-uppercase mb-3">Database</h5>
-                        <span class="badge bg-warning text-dark m-1">MySQL</span>
-                        <span class="badge bg-warning text-dark m-1">JDBC</span>
-                        <span class="badge bg-warning text-dark m-1">SQL</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tools -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card shadow border-0 rounded-4 tools">
-                    <div class="card-body text-center">
-                        <h5 class="fw-bold text-uppercase mb-3">Tools</h5>
-                        <span class="badge bg-info text-dark m-1">Git</span>
-                        <span class="badge bg-info text-dark m-1">VS Code</span>
-                        <span class="badge bg-info text-dark m-1">Postman</span>
-                        <span class="badge bg-info text-dark m-1">Tomcat</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="skills" class="skills-section fade-in">
+  <div class="bg-accent bg-accent-1"></div>
+  <div class="bg-accent bg-accent-2"></div>
+  <div class="container">
+    <div class="section-title">
+      <h2>Skills & Technologies</h2>
+      <p>My technical toolkit and areas of expertise</p>
     </div>
+
+    <div class="skills-all-container">
+      <div class="skills-grid">
+        <div
+          class="skill-card"
+          *ngFor="let skill of allSkills"
+          [attr.data-category]="skill.category"
+        >
+          <div class="skill-category-badge">{{ skill.category }}</div>
+          <img
+            [src]="skill.icon"
+            [alt]="skill.name"
+            class="skill-icon"
+            (error)="onImageError($event, skill.name)"
+          />
+          <p class="skill-name">{{ skill.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

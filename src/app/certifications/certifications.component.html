@@ -1,0 +1,45 @@
+<section id="certifications" class="certifications-section fade-in">
+  <div class="container">
+    <div class="section-title">
+      <h2>Certifications</h2>
+      <p>Professional credentials and cloud training</p>
+    </div>
+
+    <div class="cert-grid">
+      <div class="cert-card card" *ngFor="let cert of certifications">
+        <div class="cert-card-main">
+          <img
+            [src]="cert.logo"
+            [alt]="cert.name"
+            class="cert-logo"
+            [class.cert-logo--hackerrank]="cert.provider === 'HackerRank'"
+            (error)="onImageError($event)"
+          />
+          <div class="cert-info">
+            <h4>{{ cert.name }}</h4>
+            <p>{{ cert.provider }}</p>
+            <span class="cert-date" *ngIf="cert.date">{{ cert.date }}</span>
+            <a
+              *ngIf="cert.credlyUrl"
+              [href]="cert.credlyUrl"
+              class="cert-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Credly →
+            </a>
+            <a
+              *ngIf="cert.viewUrl"
+              [href]="cert.viewUrl"
+              class="cert-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ cert.viewLabel || 'View certificate' }} →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

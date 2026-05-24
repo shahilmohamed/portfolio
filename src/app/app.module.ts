@@ -5,25 +5,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MeComponent } from './me/me.component';
-import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
+import { CertificationsComponent } from './certifications/certifications.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { FormsModule } from '@angular/forms';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MeComponent,
-    AboutComponent,
     SkillsComponent,
+    CertificationsComponent,
     ProjectsComponent,
+    ExperienceComponent,
     ContactComponent,
-    ScrollAnimationDirective
+    FooterComponent,
+    ThemeToggleComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,

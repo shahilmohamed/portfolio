@@ -1,16 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-    <div class="container">
-        <a class="navbar-brand" routerLink="/">Mohamed Shahil</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="navbar-container">
+    <a href="#hero" class="logo" (click)="navigate('hero', $event)">Portfolio</a>
+
+    <button
+      class="menu-toggle"
+      [class.active]="isMenuOpen"
+      (click)="toggleMenu()"
+      aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" [class.active]="isMenuOpen">
+      <li *ngFor="let link of navLinks">
+        <a [href]="'#' + link.id" (click)="navigate(link.id, $event)">{{ link.text }}</a>
+      </li>
+    </ul>
+  </div>
 </nav>

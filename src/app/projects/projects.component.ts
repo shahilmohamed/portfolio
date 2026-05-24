@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Project } from '../model/Project';
 
 @Component({
@@ -6,13 +6,7 @@ import { Project } from '../model/Project';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class ProjectsComponent {
   projects: Project[] = [
     {
       title: 'Hospital Management System',
